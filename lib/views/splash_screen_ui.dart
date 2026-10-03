@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter_body_health_calculator_project_1/views/home_ui.dart';
 
 class splash_screen_ui extends StatefulWidget {
-   splash_screen_ui({super.key});
+   const splash_screen_ui({super.key});
 
   @override
   State<splash_screen_ui> createState() => _splash_screen_uiState();
@@ -18,7 +18,7 @@ class _splash_screen_uiState extends State<splash_screen_ui> {
       
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => home_ui()),
+        MaterialPageRoute(builder: (context) => HomeUi()),
       );
     });
   }
@@ -44,9 +44,9 @@ class _splash_screen_uiState extends State<splash_screen_ui> {
         color: Colors.white,
       ),
     ),
-    const SizedBox(height: 40), // เว้นระยะห่างจากข้อความ
+    SizedBox(height: 40), // เว้นระยะห่างจากข้อความ
             // 3. เพิ่มไอคอนหมุนโหลดตรงนี้
-            const CircularProgressIndicator(
+            CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),
   ],
